@@ -1,0 +1,93 @@
+
+body {
+    margin: 0;
+    background-color:#f1f1f1;
+    font-size: 16px;
+    line-height: 1.25em;
+    font-family: 'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif;
+    position: relative;
+    
+    .code {
+        font-family: "monospace";
+    }
+
+    &.windows {
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+        .code {
+            font-family: Consolas, Lucida Console, Courier New, monospace;
+        }
+    }
+
+    &.linux {
+        font-family: Roboto, Ubuntu, Arial, sans-serif;
+        .code {
+            font-family: "dejavu sans mono, monospace";
+        }
+    }
+
+    &.mac {
+        font-family: '.SFNSDisplay-Regular', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+        .code {
+            font-family: Menlo, monospace;
+        }
+    }
+
+    &.dragging {
+        overflow: hidden;
+    }
+}
+
+html {
+
+}
+
+#pins {
+    margin: 20px auto;
+    width: 46em;
+}
+
+.pin {
+    display: inline-block;
+    width: 23em;
+
+    &.left {
+        text-align: right;
+        &::after {
+            content: '';
+            width: 1.75em;
+            height: 1.75em;
+            display: inline-block;
+            background: url(../img/pin.svg);
+            vertical-align: top;
+        }
+    }
+    &.right {
+        text-align: left;
+        &::before {
+            content: '';
+            width: 1.75em;
+            height: 1.75em;
+            display: inline-block;
+            background: url(../img/pin.svg);
+            vertical-align: top;
+        }
+    }
+}
+
+.label {
+    width: 6em;
+    padding: .2em 1em;
+    margin: .05em 0;
+    border-radius: .5em;
+    display: inline-block;
+    color: #f1f1f1;
+}
+
+.number {
+    padding: .25em .25em;
+    width: 1.75em;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: .5em;
+    display: inline-block;
+}
